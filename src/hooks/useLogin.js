@@ -3,13 +3,13 @@ import { projectAuth } from "../firebase/config";
 import { useAuthContext } from "./useAuthContext"; 
 // the above is used to import dispatch func 
 
-export function useLogin({email, password}) {
+export function useLogin() {
     const [isCancelled, setIsCancelled] = useState(false)
     const [ error, setError ] = useState(null);
     const [ isPending, setIsPending ] = useState(false);
     const { dispatch } = useAuthContext();
 
-    const login = async () => {
+    const login = async (email, password) => {
         setError(null);
         setIsPending(true);
 
