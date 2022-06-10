@@ -12,22 +12,23 @@ export function useSignup() {
         setIsPending(true);
 
         try {
-            const res = await projectAuth.createUserWithEmailAndPassword(email, password)
-            console.log(res.user)
+            const res = await projectAuth.createUserWithEmailAndPassword(email, password);
+            console.log(res.user);
+
             if(!res){
-                throw new Error('Could not complete signup')
+                throw new Error('Could not complete signup');
                 }
             
             // add display name to user
-            await res.user.updateProfile({displayName})
+            await res.user.updateProfile({displayName});
 
             setIsPending(false);
-            setError(false)
+            setError(false);
         
         } 
         catch (err) {
             console.log(err.message)
-            setError(true)
+            setError(err)
             setIsPending(false)
         }
         
