@@ -24,3 +24,7 @@
     color: #333;
     text-decoration: none;
   }
+
+  .navbar ul li:last-child {
+    margin-left: 16px;
+  }
