@@ -29,5 +29,5 @@ export function useLogout() {
             
         }
     }
-  return {logout, error, isPending}
+  return {logout, error, isPending};
 }
