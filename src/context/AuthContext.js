@@ -15,7 +15,7 @@ export const authReducer = (state, {type, payload}) => {
 
 }
 
-export default function AuthContextProvider({children}) {
+export function AuthContextProvider({children}) {
     const [state, dispatch] = useReducer(authReducer, {
         user: null
     })
