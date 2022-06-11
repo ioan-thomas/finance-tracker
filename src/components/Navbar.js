@@ -1,9 +1,9 @@
-import { AuthContextProvider } from '../context/AuthContext'
+import { useAuthContext } from '../hooks/useAuthContext'
 import { Link } from 'react-router-dom'
 import {useLogout} from '../hooks/useLogout'
 
+// styles
 import styles from './Navbar.module.css'
-import { useAuthContext } from '../hooks/useAuthContext'
 
 export default function Navbar() {
   const {user} = useAuthContext()
