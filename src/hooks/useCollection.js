@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { projectFirestore } from "../firebase/config"
 
 
-export default function useCollection(collection) {
+export function useCollection(collection) {
     const [documents, setDocuments] = useState(null);
     const [error, setError] = useState(null);
 
