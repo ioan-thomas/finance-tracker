@@ -9,7 +9,6 @@ let initialState = {
 }
 // we set this var outside the func becuase we don't want to make a new copy everytime the hook is used
 
-
 const firestoreReducer = (state, {type, payload}) => {
     switch (type){
         case "IS_PENDING":
@@ -56,7 +55,7 @@ export const useFirestore = (collection) => {
 
     }
 
-    // can't update state if isCancelled == true, so we set that on component unmount
+    // can't update state if isCancelled == true, so that's set on component unmount
     useEffect(() => {
         return () => setIsCancelled(true)
     }, [])
