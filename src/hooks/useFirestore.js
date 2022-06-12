@@ -33,7 +33,7 @@ export const useFirestore = (collection) => {
 
     }
 
-    // cant update state if isCancelled == true, so we set that on component unmount
+    // can't update state if isCancelled == true, so we set that on component unmount
     useEffect(() => {
         return () => setIsCancelled(true)
     }, [])
