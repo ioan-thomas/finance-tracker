@@ -41,7 +41,14 @@
   cursor: pointer;
   display: block;
   width: 100%;
+  font-weight: bold;
 }
+
+.sidebar button:hover {
+  color: #1f9751;
+  background-color: #fff;
+}
+
 .sidebar h3 {
   color: #1f9751;
   margin-bottom: 20px;
